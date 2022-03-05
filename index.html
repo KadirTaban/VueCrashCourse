@@ -43,10 +43,15 @@
         <div v-if="showBooks">
             <ul>
                 <li v-for="book in books" :class="{ fav: book.isFav}" @click="toggleFav(book)">
+<!--                     attach a click event to each li tag(for each book) -->                
                     <img :src="book.img" :alt="book.title">
                     <h3>{{ book.title }}</h3>
                     <p>{{ book.author }}</p>
                 </li>
+            </ul>
+            <p>Your fav books:</p>
+            <ul>
+                <li v-for="book in filteredBooks">{{ book.title }} by {{ book.author }}</li>
             </ul>
 
         </div>
