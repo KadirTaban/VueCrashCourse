@@ -1,4 +1,4 @@
-# modalproject
+# reaction-timer
 
 ## Project setup
 ```
